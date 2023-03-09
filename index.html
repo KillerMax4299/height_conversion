@@ -9,13 +9,16 @@
   <style>
     body{background-color: darkgrey;}
     input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance: none;}
-    input{background-color: transparent; outline: none;border: 1.8px solid black;margin: 20px 4px;height: 35px;border-radius: 5px; font-size: 30px;width: 60px;text-align: center;}
-    input[id=cm]{width: 160px; background-color: white;}
+    input{ outline: none;border: 1.8px solid black;margin: 20px 4px;height: 35px;border-radius: 5px; font-size: 30px;width: 60px;text-align: center;}
+    input:disabled{background-color:tra}
+    input[id=cm]{width: 160px; ;}
     .oks{border: 1px solid blue;}
     .borders{width :15rem; font-size: 30px;font-family: poppins;display: flex;justify-content: center;}
     label{margin: 20px 0;}
-    [id=inch]{width:min-content}
     [id=container]{margin: 20%;}
+    button{color:dodgerblue;width: 2rem;height: 2rem; margin-bottom: 8px; transform: rotate(90deg); border-radius: 3px;border:2px solid dodgerblue;margin-right: 20%;}
+    button:active{opacity: 0.7;}
+    button:hover{color: white;background-color: dodgerblue;}
   </style>
   
 </head>
@@ -23,11 +26,14 @@
   <div id="container"></div>
   <div style=" position: relative; width:min-content; margin: 0 auto; "> 
   <div class="borders">
-  <input type="number" id="cm" autofocus> <label>cm</label></div>
+  <input type="number" id="cm" placeholder="cm"> <label>cm</label></div>
+  <div class="borders ">
+    <button class="" id="change">⇌</button>
+  </div>
   
   <div class="borders">
-  <input type="number" length="2" id="ft" disabled > <label >ft</label>
-  <input type="number" disabled id="inch"> <label >inch</label>
+  <input type="number" length="2" id="ft" disabled placeholder="ft"> <label >ft</label>
+  <input type="number" id="inch" min="0" max="12" placeholder="inch" disabled> <label >inch</label>
   </div>
   </div>
 <script src="code.js"></script>
