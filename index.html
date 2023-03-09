@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Height Conversion</title>
+
+  <style>
+    body{background-color: darkgrey;}
+    input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance: none;}
+    input{background-color: transparent; outline: none;border: 1.8px solid black;margin: 20px 4px;height: 35px;border-radius: 5px; font-size: 30px;width: 60px;text-align: center;}
+    input[id=cm]{width: 160px; background-color: white;}
+    .oks{border: 1px solid blue;}
+    .borders{width :15rem; font-size: 30px;font-family: poppins;display: flex;justify-content: center;}
+    label{margin: 20px 0;}
+    [id=container]{margin: 20%;}
+  </style>
+  
+</head>
+<body>
+  <div id="container"></div>
+  <div style=" position: relative; width:min-content; margin: 0 auto; "> 
+  <div class="borders">
+  <input type="number" id="cm" autofocus> <label>cm</label></div>
+  
+  <div class="borders">
+  <input type="number" length="2" id="ft" disabled > <label >ft</label>
+  <input type="number" disabled id="inch"> <label >inch</label>
+  </div>
+  </div>
+<script src="code.js"></script>
+</body>
+</html>
